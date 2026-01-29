@@ -1,29 +1,46 @@
-### Network Security Projects For Phising Data
+# Phishing URL Detection System (MLOps + FastAPI + MLflow/DagsHub)
 
-Setup github secrets:
-AWS_ACCESS_KEY_ID=
+An end-to-end machine learning system to classify URLs as **phishing or legitimate** using engineered URL-based features.  
+Includes modular ML pipelines (ingestion → transformation → training → prediction), experiment tracking with **MLflow + DagsHub**, and deployment via **FastAPI**.
 
-AWS_SECRET_ACCESS_KEY=
+---
 
-AWS_REGION = us-east-1
+## Key Features
+- Modular pipeline architecture: **Data Ingestion, Data Transformation, Model Training**
+- Trains & compares multiple models (RandomForest, GradientBoosting, Logistic Regression, AdaBoost)
+- Tracks experiments & metrics (**F1 / Precision / Recall**) using **MLflow + DagsHub**
+- Exposes REST APIs using **FastAPI**
+  - `GET /train` → trains model
+  - `POST /predict` → predicts on uploaded CSV dataset
 
-AWS_ECR_LOGIN_URI = 788614365622.dkr.ecr.us-east-1.amazonaws.com/networkssecurity
-ECR_REPOSITORY_NAME = networkssecurity
+---
 
+## Tech Stack
+**Python**, Pandas, NumPy, Scikit-learn, FastAPI, Uvicorn, MLflow, DagsHub, PyYAML, MongoDB (optional)
 
-Docker Setup In EC2 commands to be Executed
-#optinal
+---
 
-sudo apt-get update -y
+## Dataset
+The project uses a phishing dataset where each row contains URL-derived features and a target label:
+- Target column: `Result`
+  - Typically: `1 = phishing`, `-1 = legitimate` (depends on dataset version)
 
-sudo apt-get upgrade
+---
 
-#required
+## Project Structure (high level)
+- `networksecurity/` → core ML pipeline code (ingestion, transformation, training)
+- `app.py` → FastAPI entrypoint exposing `/train` and `/predict`
+- `artifacts/` → generated artifacts (processed data, models, etc.)
+- `final_model/` → final model pickle
 
-curl -fsSL https://get.docker.com -o get-docker.sh
+---
 
-sudo sh get-docker.sh
+## Setup Instructions (Local)
 
-sudo usermod -aG docker ubuntu
-
-newgrp docker
+### 1) Create & activate virtual environment
+```bash
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# Mac/Linux
+source venv/bin/activate
