@@ -34,5 +34,15 @@ The project uses a phishing dataset where each row contains URL-derived features
 - `final_model/` → final model pickle
 
 ---
+## 🚀 Installation & Setup
+
+Follow the steps below to set up and run the **Phishing URL Detection System** locally.
+
+---
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/ishantyagii/Phising-URL-Detection-System.git
+cd Phising-URL-Detection-System
 
 
