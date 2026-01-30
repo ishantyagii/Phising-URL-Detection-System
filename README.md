@@ -44,6 +44,7 @@ Follow the steps below to set up and run the **Phishing URL Detection System** l
 ```bash
 git clone https://github.com/ishantyagii/Phising-URL-Detection-System.git
 cd Phising-URL-Detection-System
+
 ---
 
 ### 2️⃣ Create & Activate Virtual Environment
@@ -52,6 +53,8 @@ cd Phising-URL-Detection-System
 ```bash
 python -m venv venv
 venv\Scripts\activate
+
+
 
 
 
