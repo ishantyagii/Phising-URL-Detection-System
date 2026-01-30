@@ -133,9 +133,7 @@ View online via DagsHub repo → *Experiments*.
 ---
 
 # ⭐ Future Enhancements
-- Docker + AWS deployment  
-- Real-time phishing classifier  
-- Prediction logging in MongoDB  
+- AWS deployment  
 
 ---
 
