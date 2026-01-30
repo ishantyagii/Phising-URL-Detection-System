@@ -137,8 +137,6 @@ View online via DagsHub repo → *Experiments*.
 
 ---
 
-# 🙌 Contributions
-PRs and issues are welcome!
 
 
 
