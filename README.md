@@ -16,7 +16,7 @@ Includes modular ML pipelines (ingestion → transformation → training → pre
 ---
 
 ## Tech Stack
-**Python**, Pandas, NumPy, Scikit-learn, FastAPI, Uvicorn, MLflow, DagsHub, PyYAML, MongoDB (optional)
+**Python**, Pandas, NumPy, Scikit-learn, FastAPI, Uvicorn, MLflow, DagsHub, PyYAML, MongoDB
 
 ---
 
@@ -27,7 +27,7 @@ The project uses a phishing dataset where each row contains URL-derived features
 
 ---
 
-## Project Structure (high level)
+## Project Structure 
 - `networksecurity/` → core ML pipeline code (ingestion, transformation, training)
 - `app.py` → FastAPI entrypoint exposing `/train` and `/predict`
 - `artifacts/` → generated artifacts (processed data, models, etc.)
