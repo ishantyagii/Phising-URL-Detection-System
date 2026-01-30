@@ -35,12 +35,4 @@ The project uses a phishing dataset where each row contains URL-derived features
 
 ---
 
-## Setup Instructions (Local)
 
-### 1) Create & activate virtual environment
-```bash
-python -m venv venv
-# Windows
-venv\Scripts\activate
-# Mac/Linux
-source venv/bin/activate
